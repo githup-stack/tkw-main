@@ -1,0 +1,478 @@
+/* Container chính của giỏ hàng */
+.cart-container {
+  max-width: 520px;
+  margin: 32px auto;
+  padding: 18px 16px 28px 16px;
+  background: #f8fafc;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(44, 62, 80, 0.1);
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+/* Tiêu đề giỏ hàng */
+.cart-title {
+  text-align: center;
+  font-size: 1.6rem;
+  color: #273c75;
+  margin-bottom: 16px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Thông báo giỏ hàng trống */
+.empty-cart {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #7f8c8d;
+}
+
+/* Danh sách các món ăn trong giỏ hàng */
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Mỗi món ăn trong giỏ hàng */
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(52, 152, 219, 0.06);
+  transition: box-shadow 0.18s;
+}
+.cart-item:hover {
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.13);
+}
+
+/* Hình ảnh món ăn */
+.cart-item-image {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 7px;
+  border: 1.5px solid #e1e7ef;
+  box-shadow: 0 1px 4px rgba(44, 62, 80, 0.03);
+}
+
+/* Chi tiết món ăn */
+.cart-item-details {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Tên món ăn */
+.cart-item-name {
+  font-size: 1.03rem;
+  color: #192a56;
+  margin-bottom: 2px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Giá món ăn */
+.cart-item-price {
+  font-size: 0.98rem;
+  color: #e17055;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+/* Hành động món ăn */
+.cart-item-actions {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+
+.cart-item-action {
+  padding: 3px 10px;
+  background: linear-gradient(90deg, #74b9ff 0%, #a29bfe 100%);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.93rem;
+  font-weight: 500;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 4px rgba(116, 185, 255, 0.05);
+  outline: none;
+  text-decoration: none;
+}
+.cart-item-action:hover {
+  background: linear-gradient(90deg, #a29bfe 0%, #74b9ff 100%);
+  box-shadow: 0 2px 10px rgba(162, 155, 254, 0.13);
+}
+.remove-button {
+  background: linear-gradient(90deg, #ff7675 0%, #fd79a8 100%);
+}
+.remove-button:hover {
+  background: linear-gradient(90deg, #fd79a8 0%, #ff7675 100%);
+}
+
+/* Số lượng món ăn */
+.cart-item-quantity {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 6px;
+}
+.cart-item-quantity button {
+  padding: 3px 10px;
+  background: linear-gradient(90deg, #55efc4 0%, #81ecec 100%);
+  color: #0984e3;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s;
+}
+.cart-item-quantity button:hover {
+  background: linear-gradient(90deg, #81ecec 0%, #55efc4 100%);
+  color: #00b894;
+}
+.cart-item-quantity span {
+  font-size: 1.01rem;
+  color: #636e72;
+  min-width: 20px;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Tổng tiền món ăn */
+.cart-item-total {
+  font-size: 1.01rem;
+  color: #636e72;
+  font-weight: 600;
+  margin-left: auto;
+}
+
+/* Tổng đơn hàng */
+.cart-summary {
+  margin-top: 18px;
+  padding: 12px 10px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 7px rgba(44, 62, 80, 0.07);
+  text-align: right;
+}
+.cart-summary h2 {
+  font-size: 1.08rem;
+  color: #192a56;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* Nút thanh toán */
+.checkout-button {
+  padding: 8px 22px;
+  background: linear-gradient(90deg, #00b894 0%, #00cec9 100%);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.02rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 4px rgba(0, 206, 201, 0.09);
+}
+.checkout-button:hover {
+  background: linear-gradient(90deg, #00cec9 0%, #00b894 100%);
+  box-shadow: 0 2px 8px rgba(0, 206, 201, 0.13);
+}
+
+.cart-page-kfc {
+  background: #fafbfc;
+  min-height: 100vh;
+  padding-bottom: 40px;
+}
+
+.cart-header-kfc {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1050px;
+  margin: 0 auto 18px auto;
+  padding: 18px 0 0 0;
+}
+
+.back-menu-btn {
+  background: none;
+  border: none;
+  color: #222;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 5px;
+  transition: background 0.18s;
+}
+
+.back-menu-btn:hover {
+  background: #f2f2f2;
+}
+
+.cart-title-kfc {
+  font-size: 2.1rem;
+  color: #222;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.cart-logo-kfc {
+  font-size: 2.3rem;
+  font-weight: 900;
+  color: #d90000;
+  font-family: Arial Black, Arial, sans-serif;
+  letter-spacing: 2px;
+}
+
+.cart-alert-kfc {
+  max-width: 650px;
+  margin: 0 auto 18px auto;
+  background: #ffeaea;
+  color: #d90000;
+  border: 1px solid #ffd6d6;
+  border-radius: 8px;
+  padding: 14px 20px;
+  font-size: 1.03rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cart-main-kfc {
+  display: flex;
+  max-width: 1050px;
+  margin: 0 auto;
+  gap: 24px;
+}
+
+.cart-left-kfc {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cart-item-kfc {
+  display: flex;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 16px;
+  gap: 16px;
+  transition: box-shadow 0.2s;
+}
+
+.cart-item-kfc:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.cart-item-image-kfc {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+
+.cart-item-info-kfc {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cart-item-row1-kfc {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.cart-item-oldprice-kfc {
+  font-size: 0.9rem;
+  color: #999;
+  text-decoration: line-through;
+}
+
+.cart-item-price-kfc {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #d90000;
+}
+
+.cart-item-name-kfc {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 4px;
+}
+
+.cart-item-actions-kfc {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.cart-item-action-kfc {
+  background: none;
+  border: none;
+  color: #555;
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background 0.2s;
+  text-decoration: none;
+}
+
+.cart-item-action-kfc:hover {
+  background: #f5f5f5;
+  color: #222;
+}
+
+.remove-button {
+  color: #d90000;
+}
+
+.remove-button:hover {
+  background: #fff0f0;
+}
+
+.cart-item-qty-kfc {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.qty-btn-kfc {
+  background: #f5f5f5;
+  border: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.qty-btn-kfc:hover {
+  background: #e5e5e5;
+}
+
+.cart-item-qty-kfc span {
+  font-size: 1rem;
+  font-weight: 600;
+  min-width: 20px;
+  text-align: center;
+}
+
+.cart-item-total-kfc {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #222;
+  align-self: flex-start;
+  margin-top: 8px;
+}
+
+.cart-summary-kfc {
+  width: 320px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  height: fit-content;
+  position: sticky;
+  top: 20px;
+}
+
+.cart-summary-title-kfc {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.cart-summary-discount-kfc {
+  margin-bottom: 16px;
+}
+
+.cart-summary-discount-input-kfc {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.cart-summary-discount-input-kfc input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.cart-summary-discount-input-kfc button {
+  background: #222;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.cart-summary-discount-input-kfc button:hover {
+  background: #444;
+}
+
+.cart-summary-row-kfc {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 1rem;
+  color: #555;
+}
+
+.cart-summary-totalpay-kfc {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #222;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid #eee;
+}
+
+.checkout-button-kfc {
+  width: 100%;
+  background: #d90000;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 16px;
+  transition: background 0.2s;
+}
+
+.checkout-button-kfc:hover {
+  background: #b30000;
+}
